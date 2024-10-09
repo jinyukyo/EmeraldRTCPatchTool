@@ -102,16 +102,17 @@ namespace emeraldRTCPatcher
 
         public static bool IsRomVaild(byte[] rom)
         {
-            if (rom.Length >= emeraldRomMinSize && rom.Length < emeraldRomMaxSize)
-            {
-                string magic = ASCIIEncoding.ASCII.GetString(rom, magicOffset, emeraldMagic.Length);
-                if (magic == emeraldMagic)
-                {
-                    var results = getSymbolAddr(rom);
-                    return results[0] != 0;
-                }
-            }
-            return false;
+            //if (rom.Length >= emeraldRomMinSize && rom.Length < emeraldRomMaxSize)
+            //{
+            //    string magic = ASCIIEncoding.ASCII.GetString(rom, magicOffset, emeraldMagic.Length);
+            //    if (magic == emeraldMagic)
+            //    {
+            //        var results = getSymbolAddr(rom);
+            //        return results[0] != 0;
+            //    }
+            //}
+            //return false;
+            return true;
         }
     }
 }
